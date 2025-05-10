@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/edit.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="form">
+        <form action="/editfile" method="post">
+          <!-- <label>Title: </label> -->
+          <input
+            type=""
+            placeholder="Enter Title here"
+            name="prev"
+            id="inp"
+            value="<%= file %>"
+            readonly
+          />
+          <br />
+          <!-- <label>Details: </label> -->
+          <input
+            type="text"
+            id="inp"
+            placeholder="Enter Updated name here"
+            name="new"
+          />
+          <br />
+          <br />
+          <input
+            class="submit"
+            type="submit"
+            value="Update Name"
+            style="background-color: yellow; color: black"
+          />
+          <br />
+          <br />
+          <a href="/">Go Home...</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

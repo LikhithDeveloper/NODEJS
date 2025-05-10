@@ -32,8 +32,12 @@
       <div class="task-container">
         <% files.forEach((val,index) => { %>
         <div class="tasks">
-          <h1><%= val %></h1>
-          <a href="">Read more...</a>
+          <% value = val.split(".")[0] %>
+          <h1><%= value %></h1>
+          <span>
+            <a href="/files/<%= val %>">Read more...</a>
+            <a style="margin-left: 100px" href="/edit/<%= val %>">Edit...</a>
+          </span>
         </div>
         <% }) %>
       </div>
