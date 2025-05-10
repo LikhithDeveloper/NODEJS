@@ -36,10 +36,7 @@ app.use(express.urlencoded({ extended: true })); // used to parse the data comin
 // -------------------------------
 
 // this type 2 of writing middlewares in express
-app.use("/about/:id", (err, req, res, next) => {
-  if (err) {
-    console.err(err);
-  }
+app.use("/about/:id", (req, res, next) => {
   console.log("----------------");
   //   console.log(req);
   console.log("----------------");
@@ -50,6 +47,16 @@ app.use("/about/:id", (err, req, res, next) => {
 app.post("/about/:id", (req, res) => {
   res.send({ message: req.c, status: "200" });
 });
+
+app.get("/about/:id", (req, res) => {
+  res.send({ message: "Your in get request now", status: "200" });
+});
+
+// above we learnt different ways to write middlewares but if you want to write a middleware to specific route and its specific request
+// then you should use like this below.
+// app.method("/route", middlewareFunction,(req,res) => {
+//    remaining code...........
+// })
 
 app.get("/", (req, res) => {
   res.send("Hello world!");

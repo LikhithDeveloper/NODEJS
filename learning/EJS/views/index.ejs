@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Sum:<%= 30 + 40 %></h2>
+    <h1>About</h1>
+    <input type="number" placeholder="enter id" class="inp" />
+    <a href="/about" class="link">click here </a>
+    <script>
+      let ans = 0;
+      document.addEventListener("DOMContentLoaded", () => {
+        let link = document.querySelector(".link");
+        const inputElement = document.querySelector(".inp");
+        inputElement.addEventListener("input", () => {
+          ans = inputElement.value;
+          link.setAttribute(`href`, `/about/${ans}`);
+        });
+      });
+    </script>
+  </body>
+</html>
