@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/task1.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="form">
+        <form action="/create" method="post">
+          <!-- <label>Title: </label> -->
+          <input
+            type="text"
+            placeholder="Enter Title here"
+            name="title"
+            id="inp"
+          />
+          <br />
+          <!-- <label>Details: </label> -->
+          <textarea
+            name="details"
+            placeholder="Enter Details here"
+            rows="6"
+          ></textarea>
+          <br />
+          <br />
+          <input class="submit" type="submit" />
+        </form>
+      </div>
+      <div class="task-container">
+        <% files.forEach((val,index) => { %>
+        <div class="tasks">
+          <h1><%= val %></h1>
+          <a href="">Read more...</a>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>
