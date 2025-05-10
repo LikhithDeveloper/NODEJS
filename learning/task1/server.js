@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 
 app.post("/create", (req, res) => {
   const { title, details } = req.body;
-  fs.writeFile(`./files/${title.split(" ").join("")}/`, details, (err) => {
+  fs.writeFile(`./files/${title.split(" ").join("")}.txt/`, details, (err) => {
     res.redirect("/");
   });
 });
